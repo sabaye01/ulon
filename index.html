@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>$ULON · The Great Swirl</title>
+<meta name="description" content="$ULON: Dr. Ulon Johnson's meme lab on Solana via pump.fun. Enter The Great Swirl.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--espresso:#3b2418;--mocha:#6b4430;--latte:#c89f7a;--cream:#fbf1e3;--foam:#fffaf3;--pink:#f4a6b8;--caramel:#e09a4f}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Nunito,sans-serif;background:var(--cream);color:var(--espresso);line-height:1.6}
+h1,h2,h3{font-family:Fredoka,sans-serif;line-height:1.15}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+nav{position:sticky;top:0;z-index:5;background:rgba(251,241,227,.92);backdrop-filter:blur(6px);border-bottom:2px dashed var(--latte)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;padding:12px 22px}
+nav .logo{font-family:Fredoka;font-weight:700;font-size:1.3rem}
+nav ul{display:flex;gap:18px;list-style:none;font-weight:700}
+nav a{text-decoration:none}
+.hero{position:relative;overflow:hidden;text-align:center;padding:80px 0 90px;background:linear-gradient(180deg,rgba(40,24,14,.55) 0%,rgba(60,38,24,.35) 45%,rgba(245,232,214,.9) 100%),url(hero-latte.jpg) center 40%/cover no-repeat}
+.hero h1,.hero .sub,.hero p.tag{text-shadow:0 2px 12px rgba(0,0,0,.55)}.hero h1{color:#fff8ee!important}.hero .sub,.hero p.tag{color:#fbeedd!important}
+.swirl{position:absolute;inset:50% auto auto 50%;width:900px;height:900px;margin:-450px 0 0 -450px;border-radius:50%;background:repeating-conic-gradient(from 0deg,rgba(107,68,48,.10) 0 15deg,transparent 15deg 30deg);animation:spin 40s linear infinite;pointer-events:none;opacity:.25}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero .wrap{position:relative}
+.bunny{font-size:4rem;display:inline-block;animation:hop 2.4s ease-in-out infinite}
+@keyframes hop{0%,100%{transform:translateY(0)}40%{transform:translateY(-18px)}}
+.hero h1{font-size:clamp(3rem,10vw,6rem);color:var(--espresso)}
+.hero h1 span{color:var(--caramel)}
+.hero .sub{font-family:Fredoka;font-size:clamp(1.4rem,4vw,2.2rem);color:var(--mocha)}
+.hero p.tag{max-width:560px;margin:14px auto 28px;font-size:1.1rem}
+.ca{display:inline-flex;align-items:center;gap:10px;background:var(--foam);border:3px solid var(--espresso);border-radius:999px;padding:8px 8px 8px 22px;font-family:monospace;font-size:1.05rem;box-shadow:5px 5px 0 var(--espresso);max-width:100%}
+.ca code{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+button,.btn{font-family:Fredoka;font-weight:600;cursor:pointer;border:3px solid var(--espresso);border-radius:999px;padding:10px 22px;font-size:1rem;text-decoration:none;display:inline-block;transition:transform .15s}
+button{background:var(--pink)}
+button:hover,.btn:hover{transform:translate(-2px,-2px)}
+.btns{margin-top:28px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn.x{background:var(--espresso);color:var(--foam)}
+.btn.pf{background:var(--caramel);box-shadow:4px 4px 0 var(--espresso)}
+section{padding:80px 0}
+section h2{font-size:clamp(2rem,5vw,3rem);margin-bottom:18px}
+.eyebrow{text-transform:uppercase;letter-spacing:.15em;font-weight:700;color:var(--caramel);font-size:.85rem}
+.about{background:var(--foam)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;margin-top:28px}
+.card{background:var(--cream);border:3px solid var(--espresso);border-radius:22px;padding:22px;box-shadow:6px 6px 0 var(--latte)}
+.card .ic{font-size:2rem}
+.card h3{margin:6px 0}
+.paper{background:linear-gradient(180deg,var(--cream),#f3e1c9)}
+.paper .doc{background:var(--foam);border:3px solid var(--espresso);border-radius:28px;padding:clamp(22px,5vw,50px);box-shadow:8px 8px 0 var(--mocha);position:relative}
+.paper .doc::before{content:"🐰";position:absolute;top:-34px;right:30px;font-size:3.4rem;transform:rotate(12deg)}
+.paper h3{font-size:1.6rem;margin:34px 0 10px;color:var(--mocha)}
+.paper h3:first-of-type{margin-top:10px}
+.paper ul{padding-left:22px}
+.paper li{margin:6px 0}
+.note{background:#fde7ec;border-left:6px solid var(--pink);padding:12px 16px;border-radius:10px;margin-top:14px;font-size:.95rem}
+.road{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:12px}
+.hop{background:var(--cream);border:2px dashed var(--mocha);border-radius:18px;padding:18px}
+.hop b{font-family:Fredoka;font-size:1.2rem;color:var(--caramel);display:block}
+table{width:100%;border-collapse:collapse;margin-top:10px}
+td{padding:10px;border-bottom:2px dotted var(--latte);vertical-align:top}
+td:first-child{font-weight:700;width:38%}
+.join{text-align:center;background:var(--espresso);color:var(--foam)}
+.join p{max-width:600px;margin:0 auto 24px}
+.join .btn.x{background:var(--foam);color:var(--espresso);border-color:var(--foam)}
+footer{background:#2a1810;color:#e8d6c2;padding:40px 0;font-size:.9rem}
+footer strong{color:var(--pink)}
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(120px);background:var(--espresso);color:var(--foam);padding:10px 20px;border-radius:999px;transition:transform .3s;font-weight:700}
+.toast.show{transform:translateX(-50%) translateY(0)}
+@media(max-width:640px){nav ul{display:none}.hero{padding:56px 0 64px}.ca{font-size:.9rem;padding-left:14px}section{padding:56px 0}}
+@media(prefers-reduced-motion:reduce){.swirl,.bunny{animation:none}}
+</style></head><body>
+<nav><div class="wrap"><div class="logo">🌀 $ULON</div><ul><li><a href="#about">The Lab</a></li><li><a href="#bunny-paper">Bunny Paper</a></li><li><a href="#join">Join</a></li></ul></div></nav>
+
+<header class="hero"><div class="swirl"></div><div class="wrap">
+<div class="bunny">🐰</div>
+<h1><span>$</span>ULON</h1>
+<div class="sub">The Great Swirl 🌀</div>
+<p class="tag">Dr. Ulon Johnson's meme lab on Solana. Grab a cup, take a seat, and get swirled in with the friendliest crowd on pump.fun.</p>
+<div class="ca"><span>CA:</span> <code id="ca">TBA</code><button id="copy" type="button">Copy</button></div>
+<div class="btns"><a class="btn x" href="https://x.com/ulon_sol" target="_blank" rel="noopener">Follow @ulon_sol on X</a><a class="btn pf" href="#">Swirl on pump.fun</a></div>
+</div></header>
+
+<section class="about" id="about"><div class="wrap">
+<div class="eyebrow">Meet the doc</div>
+<h2>Inside Dr. Ulon Johnson's Swirl Lab</h2>
+<p>Deep in a lab that smells a lot like fresh espresso, Dr. Ulon Johnson spent too many late nights staring into his coffee cup. Every stir gave the same answer: <em>swirl</em>. Cream into coffee, coffee into cream, strangers into friends. He called it <strong>The Great Swirl</strong>, and he decided the whole internet should be in on it.</p>
+<p>$ULON is the result: a community meme coin on Solana, launched fair on pump.fun, built around good vibes, good coffee, and good people mixing together.</p>
+<div class="grid">
+<div class="card"><div class="ic">☕</div><h3>Coffee-powered</h3><p>Every idea in the lab begins with a fresh cup and a slow stir.</p></div>
+<div class="card"><div class="ic">🌀</div><h3>Built to swirl</h3><p>We mix communities together. Everyone's welcome in the cup.</p></div>
+<div class="card"><div class="ic">🐰</div><h3>Hoppy energy</h3><p>Our bunny mascot keeps things light, playful, and always moving forward.</p></div>
+</div></div></section>
+
+<section class="paper" id="bunny-paper"><div class="wrap">
+<div class="eyebrow">Our playful white paper</div>
+<h2>The Bunny Paper 🐰</h2>
+<div class="doc">
+<h3>1. The Mission</h3>
+<ul>
+<li><b>Grow the community:</b> bring together meme lovers, coffee lovers, and the merely curious.</li>
+<li><b>Get people mingling:</b> online swirl sessions, meme contests, and, someday, real coffee meetups.</li>
+<li><b>Spread awareness:</b> share the Swirl far and wide, one meme and one cup at a time.</li>
+</ul>
+<h3>2. The Vision: an Ulon Swirl in every cup</h3>
+<p>Our dream is to one day see an <strong>"Ulon Swirl"</strong> flavor on real coffee menus. We're working toward building the community and infrastructure that could make partnerships with coffee shops possible, starting with local cafés and, as a big ambition, maybe even chains like Starbucks or Peet's someday.</p>
+<div class="note">To be clear: this is a goal, not a fact. $ULON has <b>no partnership, sponsorship, or affiliation</b> with Starbucks, Peet's, or any coffee brand today.</div>
+<h3>3. The Roadmap (in Hops)</h3>
+<div class="road">
+<div class="hop"><b>Hop 1 · The First Stir</b>Fair launch on pump.fun, open the lab on X, post the one true CA, and start the meme machine.</div>
+<div class="hop"><b>Hop 2 · Swirl the Crowd</b>Meme contests, community spaces, and spreading the Swirl across Solana.</div>
+<div class="hop"><b>Hop 3 · Café Conversations</b>Reach out to local coffee shops about community meetups and the idea of a Swirl flavor.</div>
+<div class="hop"><b>Hop 4 · The Big Dream</b>Keep working toward bigger coffee collaborations, with the Ulon Swirl on bigger menus as the goal.</div>
+</div>
+<h3>4. Community: how to join</h3>
+<ul>
+<li>Follow <a href="https://x.com/ulon_sol" target="_blank" rel="noopener"><b>@ulon_sol</b></a> on X. It's the only official account.</li>
+<li>Share your best swirl memes. The good ones get a repost.</li>
+<li>Always check the CA against the one pinned on @ulon_sol. Clones will show up, so ignore them.</li>
+</ul>
+<h3>5. Tokenomics (keeping it simple)</h3>
+<table>
+<tr><td>Chain</td><td>Solana</td></tr>
+<tr><td>Launch</td><td>Fair launch on pump.fun</td></tr>
+<tr><td>Presale</td><td>None</td></tr>
+<tr><td>Pricing</td><td>Standard pump.fun bonding curve</td></tr>
+<tr><td>Contract address</td><td>TBA, posted only on @ulon_sol</td></tr>
+<tr><td>Other details</td><td>TBA</td></tr>
+</table>
+</div></div></section>
+
+<section class="join" id="join"><div class="wrap">
+<h2>Hop into The Great Swirl 🌀</h2>
+<p>Pour a cup, grab a meme, and come say hi. The lab's door is always open.</p>
+<div class="btns"><a class="btn x" href="https://x.com/ulon_sol" target="_blank" rel="noopener">@ulon_sol on X</a><a class="btn pf" href="#">pump.fun (coming soon)</a></div>
+</div></section>
+
+<footer><div class="wrap">
+<p><strong>Disclaimer:</strong> $ULON is a meme coin made for fun and community. It has no intrinsic value and comes with no promises of returns. Nothing on this site is financial advice, so do your own research and never spend more than you can afford to lose. $ULON is not affiliated with, endorsed by, or partnered with Starbucks, Peet's, or any other coffee brand. Any mention of coffee shops describes an aspiration only. The only real contract address is the one posted on <a href="https://x.com/ulon_sol">@ulon_sol</a>.</p>
+<p style="margin-top:14px">© 2026 $ULON · The Great Swirl 🌀🐰</p>
+</div></footer>
+<div class="toast" id="toast">Copied!</div>
+<script>
+document.getElementById('copy').onclick=function(){var t=document.getElementById('ca').textContent.trim(),m=document.getElementById('toast');
+m.textContent=t==='TBA'?'CA not live yet. Watch @ulon_sol 🐰':'Copied!';
+if(t!=='TBA'&&navigator.clipboard)navigator.clipboard.writeText(t);
+m.classList.add('show');setTimeout(function(){m.classList.remove('show')},1800)};
+</script>
+</body></html>
